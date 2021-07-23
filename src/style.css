@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Gilroy', sans-serif;
+}
+
+.bg-org {
+    background: #FF6647;
+}
+.dark .dark\:hover\:bg-org:hover {
+    background: #FF6647;
+}
+.hover\:bg-org:hover {
+    background: #FF6647;
+}
+
+.main-h{
+    height: 900px;
+}
+
+@media (min-width: 1536px) {
+    .\32 xl\:main-h {
+        height: 900px;
+    }
+}
+
+.-translate-y-custom {
+    --tw-translate-y: -80rem;
+
+}
+.w-body {
+    width: 1392px;
+}
+
+
+@layer components {
+    .nav-link-parent {
+        @apply flex flex-col items-center gap-y-3 relative bottom-0 transition
+    }
+    .nav-link-childe {
+        @apply w-12 h-12 flex justify-center overflow-hidden bg-white text-gray-500 rounded-xl transition hover:shadow-xl hover:bg-org hover:text-gray-50 dark:text-gray-50 dark:bg-gray-700 dark:hover:bg-org z-10 relative
+    }
+    .nav-link-childe.active {
+        @apply bg-org text-gray-50 shadow-xl
+    }
+    .show {
+        @apply transform -translate-y-custom
+    }
+    .show-bottom {
+        @apply transform translate-y-56
+    }
+    
+}
